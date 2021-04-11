@@ -16,7 +16,7 @@ namespace MarsQA_1.Helpers
         public void Initialize()
         {
             //Defining the browser
-            driver = new ChromeDriver();
+            driver = new ChromeDriver(@"C:\MARS QA\MARSQAProj\onboarding.specflow");
             TurnOnWait();
 
             //Maximise the window
@@ -39,6 +39,11 @@ namespace MarsQA_1.Helpers
         public static void NavigateUrl()
         {
             driver.Navigate().GoToUrl(BaseUrl);
+        }
+
+        public static void NavigateUrl(string url)
+        {
+            driver.Navigate().GoToUrl(url);
         }
 
         //Close the browser

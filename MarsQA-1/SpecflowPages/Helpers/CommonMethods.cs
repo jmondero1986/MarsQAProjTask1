@@ -41,19 +41,18 @@ namespace MarsQA_1.Helpers
 
         //ExtentReports
         #region reports
-        public static ExtentTest test;
+        public static ExtentTest test = new ExtentTest("test", "test");
         public static ExtentReports Extent;
 
 
-
-        public static void ExtentReports()
+        static CommonMethods()
         {
             Extent = new ExtentReports(ConstantHelpers.ReportsPath, true, DisplayOrder.NewestFirst);
             Extent.LoadConfig(ConstantHelpers.ReportXMLPath);
         }
     }
     #endregion
-
+    
 }
 
 
